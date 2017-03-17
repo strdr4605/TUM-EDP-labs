@@ -1,4 +1,4 @@
-### Event Driven Programming laboratories 
+# Event Driven Programming laboratories
 
 ## Ide Used :  
 Android Studio  
@@ -7,6 +7,6 @@ Android Studio
 Java
 
 ## Personal info :  
-Student: Dragoș Străinu
+Student: Dragoș Străinu  
 Group: FAF-151  
 Mail: dragos.strainu@faf.utm.md
