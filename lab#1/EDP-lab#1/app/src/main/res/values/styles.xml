@@ -31,4 +31,5 @@
         <item name="android:textStyle">italic</item>
         <item name="android:textSize">40dp</item>
     </style>
+
 </resources>
