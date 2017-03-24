@@ -15,5 +15,27 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Done with Pride and Prejudice by Dragoș Străinu"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mainText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Default Button"
+        android:id="@+id/defaultButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom Button"
+        android:id="@+id/customButton"
+        android:layout_alignTop="@+id/defaultButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp"
+        android:theme="@style/customButton" />
 </RelativeLayout>
