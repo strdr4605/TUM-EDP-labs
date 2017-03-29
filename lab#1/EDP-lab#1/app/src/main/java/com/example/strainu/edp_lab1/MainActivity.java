@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         customButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                customText.setTextSize(30);
+                customText.setTextSize(15);
             }
         });
 
