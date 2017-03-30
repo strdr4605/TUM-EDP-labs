@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -71,6 +72,25 @@ public class MainActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onKeyDown(int keycode, KeyEvent e) {
+
+        View root = findViewById(R.id.content_layout).getRootView();
+        Random rnd = new Random();
+        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+
+        switch(keycode) {
+            case KeyEvent.KEYCODE_VOLUME_UP:
+                Toast.makeText(MainActivity.this, "Volume Up", Toast.LENGTH_SHORT).show();
+                break;
+            case KeyEvent.KEYCODE_VOLUME_DOWN:
+                root.setBackgroundColor(color);
+                break;
+        }
+
+        return super.onKeyDown(keycode, e);
     }
 
     @Override
