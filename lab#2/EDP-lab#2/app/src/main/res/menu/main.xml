@@ -5,4 +5,17 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         app:showAsAction="never" />
+    <item android:id="@+id/action_toast"
+        android:title="@string/action_toast"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_change_bg"
+        android:title="@string/action_change_bg"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_default_bg"
+        android:title="@string/action_default_bg"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
 </menu>

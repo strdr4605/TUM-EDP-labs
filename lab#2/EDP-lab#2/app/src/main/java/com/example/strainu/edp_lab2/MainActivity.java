@@ -2,6 +2,7 @@ package com.example.strainu.edp_lab2;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -77,8 +81,24 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+        View root = findViewById(R.id.content_layout).getRootView();
+
+        switch (id) {
+            case R.id.action_toast:
+                Toast.makeText(MainActivity.this, getString(R.string.action_toast), Toast.LENGTH_LONG).show();
+                break;
+            case R.id.action_change_bg:
+                Random rnd = new Random();
+                int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+                root.setBackgroundColor(color);
+                break;
+            case R.id.action_default_bg:
+                root.setBackgroundColor(Color.WHITE);
+                break;
+
         }
 
         return super.onOptionsItemSelected(item);

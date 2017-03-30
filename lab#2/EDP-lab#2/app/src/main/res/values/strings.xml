@@ -5,4 +5,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="action_toast">Toast Notification</string>
+    <string name="action_change_bg">Change Background Color</string>
+    <string name="action_default_bg">Set White Background</string>
 </resources>
