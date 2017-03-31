@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity
             }
 
             public void onSwipeBottom(float diff) {
+
 //                Toast.makeText(MainActivity.this, "bottom", Toast.LENGTH_SHORT).show();
                 Log.i("mytag", "bottom" + diff);
                 int color = Color.TRANSPARENT;
