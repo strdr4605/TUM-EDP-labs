@@ -3,10 +3,14 @@ package com.example.strainu.edp_lab2;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,7 +20,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
+import com.example.strainu.edp_lab2.OnSwipeTouchListener;
 
 import java.util.Random;
 
@@ -24,11 +30,72 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        RelativeLayout content_layout = (RelativeLayout) findViewById(R.id.content_layout);
+
+        content_layout.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
+            View root = findViewById(R.id.content_layout).getRootView();
+
+
+            public void onSwipeTop(float diff) {
+//                Toast.makeText(MainActivity.this, "top", Toast.LENGTH_SHORT).show();
+                Log.i("mytag", "top" + diff);
+                int color = Color.TRANSPARENT;
+                Drawable background = root.getBackground();
+                if (background instanceof ColorDrawable) {
+                    color = ((ColorDrawable) background).getColor();
+                    color += diff * diff;
+                    root.setBackgroundColor(color);
+                }
+            }
+
+            public void onSwipeRight(float diff) {
+//                Toast.makeText(MainActivity.this, "right", Toast.LENGTH_SHORT).show();
+                Log.i("mytag", "right" + diff);
+                int color = Color.TRANSPARENT;
+                Drawable background = root.getBackground();
+                if (background instanceof ColorDrawable) {
+                    color = ((ColorDrawable) background).getColor();
+                    color += diff * diff * diff;
+                    root.setBackgroundColor(color);
+                }
+            }
+
+            public void onSwipeLeft(float diff) {
+//                Toast.makeText(MainActivity.this, "left", Toast.LENGTH_SHORT).show();
+                Log.i("mytag", "left" + diff);
+                int color = Color.TRANSPARENT;
+                Drawable background = root.getBackground();
+                if (background instanceof ColorDrawable) {
+                    color = ((ColorDrawable) background).getColor();
+                    color += diff * diff * diff;
+                    root.setBackgroundColor(color);
+                }
+            }
+
+            public void onSwipeBottom(float diff) {
+//                Toast.makeText(MainActivity.this, "bottom", Toast.LENGTH_SHORT).show();
+                Log.i("mytag", "bottom" + diff);
+                int color = Color.TRANSPARENT;
+                Drawable background = root.getBackground();
+                if (background instanceof ColorDrawable) {
+                    color = ((ColorDrawable) background).getColor();
+                    color += diff * diff;
+                    root.setBackgroundColor(color);
+                }
+            }
+
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -123,6 +190,8 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
