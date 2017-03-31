@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity
 
 
             public void onSwipeTop(float diff) {
-//                Toast.makeText(MainActivity.this, "top", Toast.LENGTH_SHORT).show();
                 Log.i("mytag", "top" + diff);
                 int color = Color.TRANSPARENT;
                 Drawable background = root.getBackground();
@@ -60,7 +59,6 @@ public class MainActivity extends AppCompatActivity
             }
 
             public void onSwipeRight(float diff) {
-//                Toast.makeText(MainActivity.this, "right", Toast.LENGTH_SHORT).show();
                 Log.i("mytag", "right" + diff);
                 int color = Color.TRANSPARENT;
                 Drawable background = root.getBackground();
@@ -72,7 +70,6 @@ public class MainActivity extends AppCompatActivity
             }
 
             public void onSwipeLeft(float diff) {
-//                Toast.makeText(MainActivity.this, "left", Toast.LENGTH_SHORT).show();
                 Log.i("mytag", "left" + diff);
                 int color = Color.TRANSPARENT;
                 Drawable background = root.getBackground();
@@ -84,7 +81,6 @@ public class MainActivity extends AppCompatActivity
             }
 
             public void onSwipeBottom(float diff) {
-//                Toast.makeText(MainActivity.this, "bottom", Toast.LENGTH_SHORT).show();
                 Log.i("mytag", "bottom" + diff);
                 int color = Color.TRANSPARENT;
                 Drawable background = root.getBackground();
