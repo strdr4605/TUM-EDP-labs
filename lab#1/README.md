@@ -73,7 +73,7 @@ I decided to make this laboratory work in Android Studio.
 
 App locks like this:
 
-  ![Alt](images/1.png =300x)
+  ![Alt](images/1.png)
 
 - For interaction between elements I added onClick Event for customButton. On click it will change customText size.
 
@@ -92,4 +92,4 @@ App locks like this:
 
 After click:
 
-  ![Alt](images/2.png =300x)
+  ![Alt](images/2.png)
