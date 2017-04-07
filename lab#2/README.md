@@ -23,7 +23,7 @@
   });
   ```
 
-  ![Alt](images/lab#2-2.gif)
+  ![Alt](images/lab%232-2.gif)
 
 - Add a system menu to your application with at least 3 items (add actions to that items)
 
@@ -51,7 +51,7 @@
       }
   ```
 
-  ![Alt](images/lab#2-1.gif)
+  ![Alt](images/lab%232-1.gif)
 
 - Hook keyboard input. Add 2 custom events.
 
@@ -78,12 +78,12 @@
   }
   ```
 
-  ![Alt](images/lab#2-3.gif)
-  ![Alt](images/lab#2-4.gif)
+  ![Alt](images/lab%232-3.gif)
+  ![Alt](images/lab%232-4.gif)
 
 - Customize your application by adding an icon.
 
-  ![Alt](images/lab#2-1.gif)
+  ![Alt](images/lab%232-1.gif)
 
 - Add a scroll bar that will change any visible parameter of any other element (color of a text).
 
