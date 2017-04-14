@@ -27,8 +27,10 @@ public class DrawView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        canvas.scale((float) 1, (float) 1);
         drawLines(5, canvas);
         drawBezierCurve(canvas);
+        drawCircle(canvas);
     }
 
     private void drawLines(int n, Canvas canvas) {
@@ -64,6 +66,12 @@ public class DrawView extends View {
         path.moveTo(10, 174);
         path.cubicTo(5, 53, 486, 153, 281, 31);
         canvas.drawPath(path, paint);
+    }
+
+    private void drawCircle(Canvas canvas) {
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.GREEN);
+        canvas.drawCircle(100, 100 , 50, paint);
     }
 
 }
