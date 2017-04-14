@@ -34,14 +34,14 @@ public class DrawView extends View {
     private void drawLines(int n, Canvas canvas) {
         Random rnd = new Random();
         paint = new Paint();
-        paint.setStrokeWidth(10);
+        paint.setStrokeWidth(5);
         float startX = 0;
         float startY = 0;
         float stopX = 0;
         float stopY = 0;
         for(int i = 0; i < n; i++) {
             paint.setARGB(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-            startX = 700 + i * 50;
+            startX = 300 + i * 50;
             startY = i * 10;
             stopX = startX + 100;
             stopY = startY + 200;
@@ -53,15 +53,16 @@ public class DrawView extends View {
         paint.setStyle(Paint.Style.STROKE);
         path = new Path();
         paint.setColor(Color.RED);
-        paint.setStrokeWidth(6);
-        path.moveTo(54, 35);
+        paint.setStrokeWidth(3);
+        path.moveTo(10, 35);
         path.cubicTo(102, 120, 350, 100, 237, 18);
         canvas.drawPath(path, paint);
 
+        path = new Path();
         paint.setColor(Color.BLUE);
-        paint.setStrokeWidth(10);
-        path.moveTo(79, 385);
-        path.cubicTo(102, 120, 310, 476, 427, 232);
+        paint.setStrokeWidth(5);
+        path.moveTo(10, 174);
+        path.cubicTo(5, 53, 486, 153, 281, 31);
         canvas.drawPath(path, paint);
     }
 
